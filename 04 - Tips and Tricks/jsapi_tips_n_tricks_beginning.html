@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Tableau JavaScript API Techniques Video</title>
+	<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+	<link href="bootstrap.css" rel="stylesheet" media="screen">
+	<script type="text/javascript" src="http://public.tableau.com/javascripts/api/tableau-2.js"></script>
+	<script type="text/javascript" src="jsapi_techniques_beginning.js"></script>
+</head>
+<body>
+	<div class='container'>
+		<div class='row'>
+				<div class='span3'><img src='logo.png' ></div>
+			<h2 class='span7 pagination-centered'>JavaScript API Techniques</h2>
+		</div>
+		<div class='row'><h3 class='offset3 span7 pagination-centered' id='sheetName'></h3></div>
+		<div class='row'>
+
+			<ul id = 'menu' class='nav nav-list span2'>
+                
+                <li class='nav-header'>Switching Views</li>
+				<li><a onClick="switchView('LineChart')">LineChart</a></li>
+				<li><a onClick="switchView('TreeMap')">TreeMap</a></li>
+				<li><a onClick="switchView('WordCloud')">WordCloud</a></li>
+				<li><a onClick="switchView('MyDashboard')">Dashboard</a></li>
+
+				<li class='nav-header'>Filtering & Selecting Marks</li>
+				<li><a onClick="show('Category','Book')">Show Books</a></li>
+				<li><a onClick="selectMarks('Category','Electronics')">Select Electronics Marks</a></li>
+				
+                <li class='nav-header'>Async Programming</li>
+				<li><a onClick="problemExample()">Problem Example</a></li>
+				<li><a onClick="solution()">Solution</a></li>
+			</ul>
+			<div id='myViz'></div>
+			
+
+		</div>
+	</div>
+</body>
+</html>
