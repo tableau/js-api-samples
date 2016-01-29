@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Tableau JavaScript In Action Video</title>
+	<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+	<link href="bootstrap.css" rel="stylesheet" media="screen">
+    
+    <!-- Access the API & Load your JavaScript -->
+    <script type='text/javascript'
+        src='http://public.tableau.com/javascripts/api/tableau-2.js'></script>
+    <script type='text/javascript' src='jsapi_in_action.js'></script>
+</head>
+<body>
+	<div class='container'>
+		<div class='row'>
+				<div class='span3'><img src='logo.png' ></div>
+			<h2 class='span7 pagination-centered'>JavaScript In Action</h2>
+		</div>
+		<div class='row'>
+
+			<ul id = 'menu' class='nav nav-list span2'>
+                
+                <!--These buttons will interact with our viz.-->
+                <!-- But the functions, switchView, show, and selectMarks-->
+                <!-- are custom functions that don't do anything until we write the functions in jsapi_in_action.js-->
+				<li class='nav-header'>Switching Views</li>
+				<li><a onClick="switchView('LineChart')">LineChart</a></li>
+				<li><a onClick="switchView('TreeMap')">TreeMap</a></li>
+				<li><a onClick="switchView('WordCloud')">WordCloud</a></li>
+
+				<li class='nav-header'>Filtering & Selecting Marks</li>
+				<li><a onClick="show('Category','Book')">Show Books</a></li>
+				<li><a onClick="selectMarks('Category','Electronics')">Select Electronics Marks</a></li>
+			</ul>
+            
+            <!-- Create an empty div to put the viz -->
+			<div id='myViz'></div>
+            
+		</div>
+	</div>
+</body>
+</html>
