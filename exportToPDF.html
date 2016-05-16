@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Export to PDF</title>
+    
+    <script type="text/javascript" src="https://public.tableau.com/javascripts/api/tableau-2.js"></script>
+    <script type="text/javascript">
+        var viz;
+
+        function initViz() {
+            var containerDiv = document.getElementById("vizContainer"),
+                url = "http://public.tableau.com/views/RegionalSampleWorkbook/Obesity",
+                options = {
+                    hideTabs: true
+                };
+
+            viz = new tableau.Viz(containerDiv, url, options); 
+            // Create a viz object and embed it in the container div.
+        }
+
+        function exportToPDF() {
+            viz.showExportPDFDialog();
+        }
+    </script>
+</head>
+
+<body onload="initViz();">
+    <div id="vizContainer"></div>
+    <button onclick="exportToPDF();">Export</button>
+</body>
+
+</html>
+

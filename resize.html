@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Resizing</title>
+    
+    <script type="text/javascript" src="https://public.tableau.com/javascripts/api/tableau-2.js"></script>
+    <script type="text/javascript">
+        var viz;
+        
+        function initViz() {
+            var containerDiv = document.getElementById("vizContainer"),
+                url = "http://public.tableau.com/views/RegionalSampleWorkbook/Stocks",
+                options = {
+                    hideTabs: true
+                };        
+            
+            viz = new tableau.Viz(containerDiv, url, options); 
+        }
+
+        function vizResize() {
+            var width = document.getElementById("resizeWidth").value;
+            var height = document.getElementById("resizeHeight").value;
+
+            viz.setFrameSize(parseInt(width, 10), parseInt(height, 10));
+        }
+
+        /* Important: Worksheets automatically resize to fill the div container for
+         * the visualization. However, dashboards and stories do not resize automatically
+         * unless you create them with the automatic size option in Tableau Desktop. 
+         * Scroll down to see how to change the size of a visualization that contains
+         * a dashboard or story.
+         *
+         * To change the size of a visualization that contains a dashboard or story, 
+         * use the following function instead:
+         *
+         * function vizResize() {
+         *     var width = document.getElementById("resizeWidth").value;
+         *     var height = document.getElementById("resizeHeight").value;
+         *     var sheet = viz.getWorkbook().getActiveSheet();
+         *     
+         *     sheet.changeSizeAsync(
+         *         {"behavior": "EXACTLY", "maxSize": { "height": height, "width": width }})
+         *         .then(viz.setFrameSize(parseInt(width, 10), parseInt(height, 10)));
+         * }
+        */
+
+    </script>
+</head>
+
+<body onload="initViz();">
+    <div id="vizContainer" style="width:800px; height:700px; overflow:auto;"></div>
+    <div id="controls" style="padding:20px;">
+        <form id="resizeForm">
+            <input type="text" id="resizeWidth" placeholder="Width">
+            <input type="text" id="resizeHeight" placeholder="Height">
+            <button type="button" onClick="vizResize();">Resize</button>
+        </form>
+    </div>
+</body>
+
+</html>
+
