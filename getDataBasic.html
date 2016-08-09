@@ -1,35 +1,29 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>getData() Basic Example</title>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <script type="text/javascript" src="http://your-server/javascripts/api/tableau-2.js"></script> <!-- Change this to point to your server -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    
-    <style>
-        body {margin: .5in 2in 2in .5in}
-    </style>
-
+    <script type="text/javascript" src="http://public.tableau.com/javascripts/api/tableau-2.js"></script>
     <script type="text/javascript">
         var viz, sheet, table;
 
         function initViz() {
             var containerDiv = document.getElementById("vizContainer"),
-                url = "http://your-server.com/views/PhiladelphiaSchoolPerformanceProfileScores/Sheet1",
+                url = "http://public.tableau.com/views/RegionalSampleWorkbook/Storms",
                 options = {
                     hideTabs: true,
                     hideToolbar: true,
-                    onFirstInteractive: function () {
-                        $('#getData').removeAttr("disabled"); // enable our button once the viz is ready
+                    onFirstInteractive: function() {
+                        document.getElementById('getData').disabled = false; // Enable our button
                     }
                 };
-
             viz = new tableau.Viz(containerDiv, url, options);
         }
 
-        function getUnderlyingData(){
-            sheet = viz.getWorkbook().getActiveSheet();
+        function getUnderlyingData() {
+            sheet = viz.getWorkbook().getActiveSheet().getWorksheets().get("Storm Map Sheet");
+            // If the active sheet is not a dashboard, then you can just enter:
+            // viz.getWorkbook().getActiveSheet();
             options = {
                 maxRows: 10, // Max rows to return. Use 0 to return all rows
                 ignoreAliases: false,
@@ -37,9 +31,10 @@
                 includeAllColumns: false
             };
 
-            sheet.getUnderlyingDataAsync(options).then(function(t){
-                    table = t;
-                    $("#dataTarget").html("<h4>Underlying Data:</h4><p>" + JSON.stringify(table.getData()) + "</p>");
+            sheet.getUnderlyingDataAsync(options).then(function(t) {
+                table = t;
+                var tgt = document.getElementById("dataTarget");
+                tgt.innerHTML = "<h4>Underlying Data:</h4><p>" + JSON.stringify(table.getData()) + "</p>";
             });
         }
     </script>
@@ -47,13 +42,12 @@
 
 <body onload="initViz();">
     <div class="page-header">
-        <h1>Tableau JavaScript API--<code>getData</code> Example</h1>
-        <p>This example illustrates how to get the underlying data for a viz (view) that's loaded using the JavaScript API.</p>
-        <p>After the viz has finished loading, click the <strong>Get Data</strong> button to see the data for the viz.</h5>
+        <h1>getData() Basic Example</h1>
+        <p>Click the "Get Data" button to get underlying data for the viz.</p>
         <button id="getData" onclick="getUnderlyingData()" class="btn" disabled>Get Data</button>
     </div>
     <div id="vizContainer" style="width:600px; height:600px;"></div>
     <div id="dataTarget"></div>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </body>
+
 </html>
