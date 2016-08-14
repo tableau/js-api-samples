@@ -33,8 +33,23 @@
 
             sheet.getUnderlyingDataAsync(options).then(function(table) {
                 var tgt = document.getElementById("dataTarget");
+                var out = "<h4>Underlying Data:</h4><table><thead><tr>";
 
-                tgt.innerHTML = "<h4>Underlying Data:</h4><p>" + JSON.stringify(table.getData()) + "</p>";
+                // Get Columns information like name and datatype 
+                table.getColumns().forEach( function(col) { out += "<td>" + col.getFieldName() + "</td>";});
+                out += "</tr><tr>";
+                table.getColumns().forEach( function(col) { out += "<td>" + col.getDataType() + "</td>";});
+                out += "</tr></thead><tbody>";
+                
+                // Actual values. It has two forms: value and formattedValue
+                table.getData().forEach( function(row) {
+                    out += "<tr>";
+                    row.forEach(function (col) { out += "<td>" + col.formattedValue + "</td>"; });
+                    out += "</tr>";
+                    });
+                out += "</tbody></table>";
+
+                tgt.innerHTML = out;
             });
         }
     </script>
