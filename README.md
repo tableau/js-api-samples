@@ -1,30 +1,30 @@
-# js-api-examples
+# js-api-samples
 
-This repository contains examples for the Tableau JavaScript API. You will also find companion content here for the JS API video series. Official developer 
+This repository contains samples for the Tableau JavaScript API. You will also find companion content here for the JS API video series. Official developer 
 docs for the JS API can be found [here](https://onlinehelp.tableau.com/current/api/js_api/en-us/JavaScriptAPI/js_api.htm).
 
 Getting Started
 ---------------
 * Clone this repository
-* Try the examples
-* Use 'Issues' to note any bugs or to request new examples
-* Let us know if you have JS API Examples of your own you'd like to share
+* Try the samples
+* Use 'Issues' to note any bugs or to request new samples
+* Let us know if you have samples of your own you'd like to share
 * Check out the Tableau Developer Portal at http://developers.tableau.com for a tutorial, the official docs, and the community forum
 
-JS API Examples
+JS API Samples
 ---------------
 These are created and maintained by Tableau.
 
 Demo | Source Code | Description
 -------- |  -------- |  --------
-[Basic Embed](http://tableau.github.io/js-api-examples/basicEmbed.html) | [basicEmbed.html](basicEmbed.html) | Embed a visualization in a div element. 
-[Dynamic Load](http://tableau.github.io/js-api-examples/dynamicLoad.html) | [dynamicLoad.html](dynamicLoad.html) | Dynamically load and remove visualizations. Click the Previous and Next buttons to display other visualizations in a predefined list. 
-[Export to PDF](http://tableau.github.io/js-api-examples/exportToPDF.html) | [exportToPDF.html](exportToPDF.html) | Export the current visualization view to a PDF file.
-[Filter](http://tableau.github.io/js-api-examples/filter.html) | [filter.html](filter.html) | Apply a filter to a visualization using controls on the page.
-[Get Data](http://tableau.github.io/js-api-examples/getDataBasic.html) | [getDataBasic.html](getDataBasic.html) |  Get the underlying data for the currently displayed viz. **Important**: This feature is currently in beta and has not been published to a public server to which we can link for a demo.
-[Resize](http://tableau.github.io/js-api-examples/resize.html) | [resize.html](resize.html) | Resize a visualization to a size that you specify. 
-[Respond to Events](http://tableau.github.io/js-api-examples/respondToEvents.html) | [respondToEvents.html](respondToEvents.html) | Display information about marks as you select them.
-[Select Marks](http://tableau.github.io/js-api-examples/selectMarks.html) | [selectMarks.html](selectMarks.html) | Select a set of marks in a visualization. 
+[Basic Embed](http://tableau.github.io/js-api-samples/basicEmbed.html) | [basicEmbed.html](basicEmbed.html) | Embed a visualization in a div element. 
+[Dynamic Load](http://tableau.github.io/js-api-samples/dynamicLoad.html) | [dynamicLoad.html](dynamicLoad.html) | Dynamically load and remove visualizations. Click the Previous and Next buttons to display other visualizations in a predefined list. 
+[Export to PDF](http://tableau.github.io/js-api-samples/exportToPDF.html) | [exportToPDF.html](exportToPDF.html) | Export the current visualization view to a PDF file.
+[Filter](http://tableau.github.io/js-api-samples/filter.html) | [filter.html](filter.html) | Apply a filter to a visualization using controls on the page.
+[Get Data](http://tableau.github.io/js-api-samples/getDataBasic.html) | [getDataBasic.html](getDataBasic.html) |  Get the underlying data for the currently displayed viz. **Important**: This feature is currently in beta and has not been published to a public server to which we can link for a demo.
+[Resize](http://tableau.github.io/js-api-samples/resize.html) | [resize.html](resize.html) | Resize a visualization to a size that you specify. 
+[Respond to Events](http://tableau.github.io/js-api-samples/respondToEvents.html) | [respondToEvents.html](respondToEvents.html) | Display information about marks as you select them.
+[Select Marks](http://tableau.github.io/js-api-samples/selectMarks.html) | [selectMarks.html](selectMarks.html) | Select a set of marks in a visualization. 
 
 ## Videos
 The videos are hosted on YouTube:
