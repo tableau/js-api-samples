@@ -1,4 +1,5 @@
 # js-api-samples
+[![Tableau Supported](https://img.shields.io/badge/Support%20Level-Tableau%20Supported-53bd92.svg)](https://www.tableau.com/support-levels-it-and-developer-tools)
 
 This repository contains samples for the Tableau JavaScript API. You will also find companion content here for the JS API video series. Official developer 
 docs for the JS API can be found [here](https://onlinehelp.tableau.com/current/api/js_api/en-us/JavaScriptAPI/js_api.htm).
