@@ -1,5 +1,18 @@
 # js-api-samples
-[![Tableau Supported](https://img.shields.io/badge/Support%20Level-Tableau%20Supported-53bd92.svg)](https://www.tableau.com/support-levels-it-and-developer-tools)
+
+[![Deprecated](https://img.shields.io/badge/Deprecated-do%20not%20use-orange)](https://www.tableau.com/support-levels-it-and-developer-tools)
+
+
+## Deprecated 
+Do not use this project.
+To get started with Tableau embedding, see https://github.com/tableau/embedding-playbook
+For sample code that demonstrates the v3 embedding API, see https://github.com/tableau/embedding-api-v3-samples
+For a guide to migrating your code to the v3 embedding API, see https://github.com/tableau/embedding-api-v3-guide
+
+
+------------------
+
+
 
 This repository contains samples for the Tableau JavaScript API. You will also find companion content here for the JS API video series. Official developer 
 docs for the JS API can be found [here](https://onlinehelp.tableau.com/current/api/js_api/en-us/JavaScriptAPI/js_api.htm).
